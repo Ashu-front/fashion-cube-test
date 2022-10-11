@@ -17,14 +17,15 @@ import Advertisement from "../../components/Advertisement";
 import PropTypes from "prop-types";
 import jumpTo from "../../modules/Navigation";
 import LoginRegister from "../../components/LoginRegisterModal";
-
+import Multicarousel from "../../components/Multicarousel";
+import Heading from "../../components/Heading";
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
       data: null,
       modalShow: false,
-      login: true
+      login: true,
     };
     this.addToBag = this.addToBag.bind(this);
   }
@@ -46,14 +47,14 @@ class Home extends Component {
     this.setState({ modalShow: true, login: false });
   };
 
-  addToBag = params => {
+  addToBag = (params) => {
     if (
       Auth.getUserDetails() !== undefined &&
       Auth.getUserDetails() !== null &&
       Auth.getToken() !== undefined
     ) {
       let cart = this.props.postCart(params);
-      cart.then(res => {
+      cart.then((res) => {
         console.log(res);
       });
     } else {
@@ -67,13 +68,18 @@ class Home extends Component {
       <div>
         <HomeBanner />
         <CategoryBanner />
-        {products ? (
+        {/* {products ? (
           <NewArrivals
             products={products}
             departments={departments}
             addToBag={this.addToBag}
           />
-        ) : null}
+        ) : null} */}
+
+        <Multicarousel />
+        <div className="row" style={{ marginBottom: "5%" }}>
+          <Heading title="What we offer" data-aos="fade-up" />
+        </div>
         <Benefit />
         <Advertisement />
         {products ? (

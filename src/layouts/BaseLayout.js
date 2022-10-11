@@ -43,7 +43,6 @@ class BaseLayout extends Component {
       <div className="main-wrapper">
         <div className="super_container">
           <header className="header trans_300">
-            <TopNavBar className={this.state.topHaderClass} />
             <NavBarContainer />
           </header>
           <div className="layout-Container">{this.props.children}</div>
