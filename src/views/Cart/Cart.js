@@ -40,22 +40,22 @@ class Cart extends Component {
               >
                 <p>
                   SubTotal :{" "}
-                  <span style={{ color: "#FE4C50" }}>₹{totalPrice}</span>
+                  <span style={{ color: "#1976d2" }}>₹{totalPrice}</span>
                 </p>
                 <p>
-                  Shipping : <span style={{ color: "#FE4C50" }}>Free</span>
+                  Shipping : <span style={{ color: "#1976d2" }}>Free</span>
                 </p>
 
                 <p>
                   Taxes :{" "}
-                  <span style={{ color: "#FE4C50" }}>
+                  <span style={{ color: "#1976d2" }}>
                     ₹ {CalculateTax(totalPrice).taxes}
                   </span>
                 </p>
 
                 <h3 style={{ textAlign: "center" }}>
                   Total:{" "}
-                  <span style={{ color: "#FE4C50" }}>
+                  <span style={{ color: "#1976d2" }}>
                     ₹ {CalculateTax(totalPrice).total}
                   </span>
                 </h3>

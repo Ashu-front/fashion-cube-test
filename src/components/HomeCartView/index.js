@@ -78,7 +78,7 @@ class HomeCartView extends Component {
           {items !== undefined && items !== null && (
             <div className="total--price-container">
               <h3 style={{ textAlign: "center" }}>
-                Total: <span style={{ color: "#FE4C50" }}>₹{totalPrice}</span>{" "}
+                Total: <span style={{ color: "#1976d2" }}>₹{totalPrice}</span>{" "}
               </h3>
               <button
                 className="btn btn-wide log-btn"

@@ -56,7 +56,7 @@ class NavBar extends Component {
                       shop <i className="fa fa-angle-down"></i>
                     </a>
 
-                    <div className="mega-menu">
+                    {/* <div className="mega-menu">
                       <div className="mega-menu-wrap">
                         {departments &&
                           departments.map((item, index) => {
@@ -80,7 +80,7 @@ class NavBar extends Component {
                             );
                           })}
                       </div>
-                    </div>
+                    </div> */}
                   </li>
 
                   <li>
@@ -88,7 +88,7 @@ class NavBar extends Component {
                   </li>
                 </ul>
                 <ul className="navbar_user">
-                  <li>
+                  {/* <li>
                     <a href="#">
                       <i className="fa fa-search" aria-hidden="true"></i>
                     </a>
@@ -97,7 +97,7 @@ class NavBar extends Component {
                     <a href="#">
                       <i className="fa fa-user" aria-hidden="true"></i>
                     </a>
-                  </li>
+                  </li> */}
                   <li className="checkout">
                     <a href="#" onClick={() => this.showHideModal()}>
                       <i className="fas fa-shopping-bag"></i>

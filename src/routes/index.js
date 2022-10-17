@@ -9,7 +9,7 @@ import {
   BrowserRouter as Router,
   Redirect,
   Route,
-  Switch
+  Switch,
 } from "react-router-dom";
 import { registerNav } from "../modules/Navigation";
 import { createBrowserHistory } from "history";
@@ -42,7 +42,7 @@ class Routes extends Component {
 
     return (
       <div>
-        <Router ref={registerNav}>
+        <Router basename="/" ref={registerNav}>
           <Switch>
             {HomeRoutes.map((homeRoute, index) => {
               return (
@@ -50,7 +50,7 @@ class Routes extends Component {
                   key={index}
                   path={homeRoute.path}
                   exact={homeRoute.exact}
-                  component={props => {
+                  component={(props) => {
                     return (
                       <homeRoute.layout {...props}>
                         <homeRoute.component {...props} />
@@ -66,7 +66,7 @@ class Routes extends Component {
                   key={index}
                   path={privateRoute.path}
                   exact={privateRoute.exact}
-                  component={props => {
+                  component={(props) => {
                     return (
                       <privateRoute.layout {...props}>
                         <privateRoute.component {...props} />

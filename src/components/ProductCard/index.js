@@ -8,9 +8,30 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-const ProductCard = ({ cardImage, cardTitle, cardDesc }) => {
+const ProductCard = ({
+  cardImage,
+  cardTitle,
+  cardDesc,
+  variants,
+  price,
+  offerPrice,
+  onCardClick,
+}) => {
   return (
-    <Card sx={{ maxWidth: 345, marginTop: "5%", cursor: "pointer" }} raised>
+    <Card
+      sx={{ maxWidth: 345, marginTop: "5%", cursor: "pointer" }}
+      raised
+      onClick={() =>
+        onCardClick({
+          imagePath: cardImage,
+          cardTitle,
+          cardDesc,
+          variants,
+          price,
+          offerPrice,
+        })
+      }
+    >
       <CardMedia
         component="img"
         alt="green iguana"
